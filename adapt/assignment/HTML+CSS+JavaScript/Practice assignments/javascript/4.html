@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function show(){
+                var fname = document.register.fname.value;
+                var lname = document.register.lname.value;
+                var age = document.register.age.value;
+                var degree = document.register.degree.value;
+                document.getElementById("info").innerHTML = fname+"<br/>"+lname+"<br/>"+age+"<br/>"+degree;
+            }
+        </script>
+        <h1>
+            Student Registration
+        </h1>
+        <form name="register">
+        <table>
+            <tr>
+                <td>
+                    <label for="fname">First Name;</label>
+                </td>
+                <td>
+                    <input type="text" id="fname" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="lname">Last Name</label>
+                </td>
+                <td>
+                    <input type="text" id="lname" name="lname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="age">Age: </label>
+                </td>
+                <td>
+                    <input type="number" id="age" name="age"><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Degree
+                    <input type="radio" id="Msc" value="Msc" name="degree">
+                    <label for="Msc">Msc</label>
+                    <input type="radio" id="MBA" value="MBA" name="degree">
+                    <label for="MBA">MBA</label>
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="submit" onclick="show()">
+        <div id="info"></div>
+        </form>
+    </body>
+</html>

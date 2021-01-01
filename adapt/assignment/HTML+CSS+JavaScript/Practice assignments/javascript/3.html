@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function UserLogin(){
+                var uname, pass;
+                uname = document.login.uname.value;
+                pass = document.login.pass.value;
+                if(uname=="" || pass==""){
+                    alert("Username or Password cannot be Blank..!");
+                }else if(uname==="admin" && pass=="admin"){
+                    document.getElementById("info").innerHTML = "Valid User";
+                }else{
+                    document.getElementById("info").innerHTML = "Invalid User";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>
+            Login Page
+        </h1>
+        <form name="login">
+        <table>
+            <tr>
+                <td>
+                    User Name:
+                </td>
+                <td>
+                    <input type="text" name="uname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" name="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Login" onclick="UserLogin()">
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div id="info"></div>
+    </body>
+</html>

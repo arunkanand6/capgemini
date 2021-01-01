@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Computation</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function sum(){
+                var a;
+                var ans = 0;
+                a = document.num.num.value;
+                while(a>=1){
+                    var b = a%10;
+                    if(b%2!=0){
+                        ans += b;
+                    }
+                    a /= 10;
+                    a = parseInt(a);
+                }
+                document.getElementById("ans").innerHTML = "The sum of Odd Digits in the Number is<br/>"+ans;
+            }
+        </script>
+        <h1>
+            Abacus Education Centre, Hyderabad
+        </h1>
+        <h2>
+            Sum of Odd Digis
+        </h2>
+        <form name="num">
+        Number:
+        <input type="number" name="num"><br/><br>
+        <input type="button" value="Calculate" onclick="sum()">
+        <div id="ans"></div>
+        </form>
+    </body>
+</html>

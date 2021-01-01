@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function show(){
+                document.getElementById("price").value = document.getElementById("drink").value;
+            }
+        </script>
+        <h1>
+            Swastik Soft Drinks
+        </h1>
+        <h2>
+            215, Hosur Main Road, Kormangala, Bangalore
+        </h2>
+        <h6>
+            Select Type of Drinks
+        </h6>
+        <select id="drink" onchange="show()">
+            <option value="0">--select--</option>
+            <option value="20">Pepsi</option>
+            <option value="30">Limca</option>
+            <option value="40">Miranda</option>
+        </select>
+        <input type="number" id="price" name="price">
+    </body>
+</html>

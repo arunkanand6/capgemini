@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function UserLogin(){
+                var uname, pass;
+                uname = document.login.uname.value;
+                pass = document.login.pass.value;
+                if(uname==="admin"){
+                    document.getElementById("info").innerHTML = "Valid User";
+                }else{
+                    document.getElementById("info").innerHTML = "Invalid User";
+                }
+            }
+        </script>
+    </head>
+    <body bgcolor="#5fcbcd">
+        <h1 style="text-align: center;">
+            Login Page
+        </h1>
+        <form name="login">
+        <table align="center">
+            <tr>
+                <td>
+                    User Name:
+                </td>
+                <td>
+                    <input type="text" name="uname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Password:
+                </td>
+                <td>
+                    <input type="password" name="pass">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="Login" onclick="UserLogin()">
+                </td>
+            </tr>
+        </table>
+        </form>
+        <div id="info" style="text-align: center;"></div>
+    </body>
+</html>

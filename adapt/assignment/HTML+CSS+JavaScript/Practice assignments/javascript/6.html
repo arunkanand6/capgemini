@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function leap(){
+                var year = document.getElementById("year").value;
+                if(year%4==0){
+                    if(year%100==0){
+                        if(year%400==0){
+                            document.getElementById("info").innerHTML =  "Leap";
+                        }else{
+                            document.getElementById("info").innerHTML =  "Not Leap";
+                        }
+                    }else{
+                        document.getElementById("info").innerHTML =  "Leap";
+                    }
+                }else{
+                    document.getElementById("info").innerHTML =  "Not Leap";
+                }
+            }
+        </script>
+        <p><label for="value">Enter Year:</label>
+        <input type="number" id="year"></p>
+        <input type="button" value="Check Leap Year" onclick="leap()">
+        <div id="info"></div>
+    </body>
+</html>
