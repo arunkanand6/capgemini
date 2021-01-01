@@ -1,0 +1,3 @@
+select *
+from bookrental.user_details
+order by first_name;
