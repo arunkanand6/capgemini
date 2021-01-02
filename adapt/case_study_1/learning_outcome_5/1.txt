@@ -1,0 +1,6 @@
+select *
+from bookrental.book_rental
+where book_id =
+(select book_id
+from bookrental.book
+where title='Machine Learning');

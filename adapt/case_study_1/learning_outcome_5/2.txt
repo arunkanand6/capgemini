@@ -1,0 +1,21 @@
+select title
+from
+(select title
+from bookrental.book
+where book_id in
+(select book_id
+from bookrental.book_rental
+where user_id in
+(select user_id
+from bookrental.user_details
+where city='Bangalore')))
+where title not in
+(select title
+from bookrental.book
+where book_id in
+(select book_id
+from bookrental.book_rental
+where user_id in
+(select user_id
+from bookrental.user_details
+where city<>'Bangalore')));

@@ -1,0 +1,6 @@
+select *
+from bookrental.book_rental
+where user_id =
+(select user_id
+from bookrental.user
+where first_name = 'chandrav);
