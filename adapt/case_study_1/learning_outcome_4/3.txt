@@ -1,0 +1,11 @@
+select title
+from bookrental.book
+where book_id =
+(select book_id
+from
+(select book_id, count(distinct(user_id))
+from bookrental.book_rental
+where isreturned = 'no'
+group by book_id
+order by count(distinct(user_id)) desc)
+where rownum = 1);
